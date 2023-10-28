@@ -53,7 +53,7 @@ La imagen generada se encuentra en: https://github.com/niunmango/ays-githubactio
 Puede lanzarse un contenedor usando:
 
 ```
-docker run -d -p 8080:80 ghcr.io/niunmango/ays-githubactionstest:latest
+docker run -d -p 80:80 ghcr.io/niunmango/ays-githubactionstest:latest
 ```
 
 Y luego acceder a http://localhost
