@@ -33,7 +33,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ env.REPO }}:${{ env.DATE }}
+        tags: ghcr.io/${{ env.REPO }}:${{ env.DATE }},ghcr.io/${{ env.REPO }}:latest
 
     - name: Test if the image serves the page
       run: |

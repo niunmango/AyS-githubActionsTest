@@ -31,7 +31,9 @@ docker build -t mi-contenedor .
 
 Y luego lanzar una imagen con:
 
+```
 docker run -p 80:80 mi-contenedor -d
+```
 
 **Workflow:**
 
