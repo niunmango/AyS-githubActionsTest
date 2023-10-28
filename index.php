@@ -55,14 +55,17 @@ $free_space = number_format(disk_free_space('/') / (1024 * 1024 * 1024), 2);
         }
 
         footer {
+            background-color: #f5f5f5;
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             width: 100%;
-            text-align: center;  
+            text-align: center; 
+        }
+
+        .pie {
             font-size: 5px;
-            background-color: #f5f5f5; 
         }
     </style>
     <script>
@@ -101,7 +104,7 @@ $free_space = number_format(disk_free_space('/') / (1024 * 1024 * 1024), 2);
 
     <footer>
         <hr>
-        <p>&copy niunmango - Licencia GPLv3 - <a href="https://github.com/niunmango/ays-githubactionstest/">Link al repo</a>
+        <p class="pie">&copy niunmango - Licencia GPLv3 - <a href="https://github.com/niunmango/ays-githubactionstest/">Link al repo</a>
     </footer>
 </body>
 </html>
