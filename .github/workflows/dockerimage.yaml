@@ -20,6 +20,10 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Save state
+      run: |
+        echo "DATE=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+
     - name: Set repo to lowercase
       id: repo
       run: echo "::set-output name=repo::$(echo ${{ github.repository }} | awk '{print tolower($0)}')"
