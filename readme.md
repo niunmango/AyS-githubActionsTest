@@ -46,6 +46,18 @@ El workflow realiza las siguientes acciones:
 * Publica la imagen Docker en el registro de contenedores de GitHub.
 * Comprueba que un contenedor lanzado con la imagen creada sirve una página en el puerto 80
 
+**Uso de imagen:**
+
+La imagen generada se encuentra en: https://github.com/niunmango/ays-githubactionstest/pkgs/container/ays-githubactionstest
+
+Puede lanzarse usando
+
+```
+docker run -d -p 8080:80 ghcr.io/niunmango/ays-githubactionstest:latest
+```
+
+Y luego acceder a http://localhost
+
 **Licencia:**
 
 Este proyecto está licenciado bajo la licencia GPLv3.
