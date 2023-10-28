@@ -1,6 +1,6 @@
 **Automatización y Scripting**
 
-**Proyecto: Página PHP con información del servidor**
+***Proyecto: Página PHP con información del servidor**
 
 **Descripción:**
 
@@ -11,34 +11,26 @@ Este proyecto consiste en crear una página PHP que muestre información del ser
 1. Clonar el repositorio desde GitHub:
 
 ```
-git clone https://github.com/[Tu nombre]/pagina-php-informacion-servidor.git
+git clone https://github.com/niunmango/ays-githubactionstest.git
 ```
 
 2. Navegar a la carpeta del proyecto:
 
 ```
-cd pagina-php-informacion-servidor
-```
-
-3. Instalar las dependencias de PHP:
-
-```
-composer install
-```
-
-4. Iniciar el servidor web:
-
-```
-php -S localhost:80
+cd ays-githubactionstest
 ```
 
 **Uso:**
 
-Para acceder a la página, abrir un navegador web e ir a la siguiente dirección:
+Para acceder a la página, armar el contenedor con:
 
 ```
-http://localhost
+docker build -t mi-contenedor .
 ```
+
+Y luego lanzar una imagen con:
+
+docker run -p 80:80 mi-contenedor -d
 
 **Workflow:**
 
@@ -49,11 +41,8 @@ El workflow realiza las siguientes acciones:
 * Comprueba si el usuario tiene permisos para construir y publicar imágenes Docker.
 * Comprueba si la imagen Docker ya existe. Si no existe, la construye.
 * Publica la imagen Docker en el registro de contenedores de GitHub.
+* Comprueba que un contenedor lanzado con la imagen creada sirve una página en el puerto 80
 
 **Licencia:**
 
-Este proyecto está licenciado bajo la licencia MIT.
-
-**Contacto:**
-
-Si tienes alguna pregunta o comentario, puedes contactarme en [tu correo electrónico].
+Este proyecto está licenciado bajo la licencia GPLv3.

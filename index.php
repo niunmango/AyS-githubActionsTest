@@ -53,6 +53,17 @@ $free_space = number_format(disk_free_space('/') / (1024 * 1024 * 1024), 2);
           text-align: left;
           padding: 10px 0px 0px 10px;
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            text-align: center;
+            padding: 16px;  
+            font-size: 8px; 
+        }
     </style>
     <script>
         setInterval(function() {
@@ -87,5 +98,9 @@ $free_space = number_format(disk_free_space('/') / (1024 * 1024 * 1024), 2);
     
     <h2>Información en tiempo real:</h2>
     <pre id="top_output"></pre>
+
+    <footer>
+        <p>&copy niunmango - Licencia GPLv3 - <a href="https://github.com/niunmango/ays-githubactionstest/">Link al repo</a>
+    </footer>
 </body>
 </html>
