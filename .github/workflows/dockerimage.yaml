@@ -24,12 +24,16 @@ jobs:
       id: date
       run: echo "::set-output name=date::$(date +'%Y.%m.%d')"
 
+    - name: Set repo to lowercase
+      id: repo
+      run: echo "::set-output name=repo::$(echo ${{ github.repository }} | awk '{print tolower($0)}')"
+
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository.toLowerCase() }}:${{ steps.date.outputs.date }}
+        tags: ghcr.io/${{ steps.repo.outputs.repo }}:${{ steps.date.outputs.date }}
 
     - name: Test if the image serves the page
       run: |
