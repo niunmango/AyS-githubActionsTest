@@ -62,7 +62,7 @@ $free_space = number_format(disk_free_space('/') / (1024 * 1024 * 1024), 2);
             width: 100%;
             text-align: center;
             padding: 16px;  
-            font-size: 8px; 
+            font-size: 5px; 
         }
     </style>
     <script>
@@ -96,10 +96,11 @@ $free_space = number_format(disk_free_space('/') / (1024 * 1024 * 1024), 2);
     
     <hr>
     
-    <h2>Información en tiempo real:</h2>
+    <h2>top</h2>
     <pre id="top_output"></pre>
 
     <footer>
+        <hr>
         <p>&copy niunmango - Licencia GPLv3 - <a href="https://github.com/niunmango/ays-githubactionstest/">Link al repo</a>
     </footer>
 </body>
