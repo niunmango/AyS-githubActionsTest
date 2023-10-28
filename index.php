@@ -65,7 +65,7 @@ $free_space = number_format(disk_free_space('/') / (1024 * 1024 * 1024), 2);
         }
 
         .pie {
-            font-size: 5px;
+            font-size: 12px;
         }
     </style>
     <script>
