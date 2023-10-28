@@ -60,9 +60,9 @@ $free_space = number_format(disk_free_space('/') / (1024 * 1024 * 1024), 2);
             left: 0;
             right: 0;
             width: 100%;
-            text-align: center;
-            padding: 16px;  
-            font-size: 5px; 
+            text-align: center;  
+            font-size: 5px;
+            background-color: #f5f5f5; 
         }
     </style>
     <script>

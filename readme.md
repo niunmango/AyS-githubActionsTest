@@ -1,6 +1,7 @@
 **Automatización y Scripting**
 
-***Proyecto: Página PHP con información del servidor**
+**Proyecto:
+   Página PHP con información del servidor**
 
 **Descripción:**
 
