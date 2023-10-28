@@ -50,7 +50,7 @@ El workflow realiza las siguientes acciones:
 
 La imagen generada se encuentra en: https://github.com/niunmango/ays-githubactionstest/pkgs/container/ays-githubactionstest
 
-Puede lanzarse usando
+Puede lanzarse un contenedor usando:
 
 ```
 docker run -d -p 8080:80 ghcr.io/niunmango/ays-githubactionstest:latest
