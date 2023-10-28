@@ -35,7 +35,7 @@ $free_space = number_format(disk_free_space('/') / (1024 * 1024 * 1024), 2);
 
         p {
             font-size: 16px;
-            margin-top: 4px;
+            margin-top: 4px; 
         }
         
         hr {
