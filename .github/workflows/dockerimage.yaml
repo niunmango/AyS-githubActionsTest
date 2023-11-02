@@ -35,6 +35,7 @@ jobs:
         push: true
         tags: ghcr.io/${{ env.REPO }}:${{ env.DATE }},ghcr.io/${{ env.REPO }}:latest
 
+  test:
     - name: Probar si un contenedor creado con la imagen da una página en el puerto 80
       run: |
         docker run -d -p 80:80 ghcr.io/${{ env.REPO }}:${{ env.DATE }}
