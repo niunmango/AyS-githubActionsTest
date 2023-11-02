@@ -35,8 +35,7 @@ jobs:
         push: true
         tags: ghcr.io/${{ env.REPO }}:${{ env.DATE }},ghcr.io/${{ env.REPO }}:latest
 
-test:
-
+  test:
     runs-on: ubuntu-latest
     needs: build
     steps:
