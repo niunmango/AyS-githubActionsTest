@@ -39,6 +39,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+    - name: Guardar la fecha en ENV
+      run: |
+        echo "DATE=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+
+    - name: Poner nombre del repo en minusculas (no acepta mayusculas)
+      id: repo
+      run: echo "REPO=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+
     - name: Probar si un contenedor creado con la imagen da una página en el puerto 80
       run: |
         docker run -d -p 80:80 ghcr.io/${{ env.REPO }}:${{ env.DATE }}
