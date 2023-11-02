@@ -83,7 +83,7 @@ $free_space = number_format(disk_free_space('/') / (1024 * 1024 * 1024), 2);
 </head>
 <body>
     <h1>Información del Servidor</h1>
-    <h2>Nombre de la máquina:</h2>
+    <h2>Nombre del contenedor:</h2>
     <p><?php echo $machine_name; ?></p>
     
     <hr>
