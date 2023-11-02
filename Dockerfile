@@ -1,4 +1,4 @@
-FROM php:7.4-alpine
+FROM httpd
 
 COPY . /var/www/html
 
