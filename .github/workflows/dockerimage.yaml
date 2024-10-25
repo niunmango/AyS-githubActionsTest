@@ -47,6 +47,10 @@ jobs:
       id: repo
       run: echo "REPO=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
+    - name: Login en GitHub Container Registry (ghcr.io) con PAT
+      run: |
+        docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GHCR_TOKEN }}
+
     - name: Probar si un contenedor creado con la imagen da una página en el puerto 80
       run: |
         docker run -d -p 80:80 ghcr.io/${{ env.REPO }}:${{ env.DATE }}
